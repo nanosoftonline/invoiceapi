@@ -7,9 +7,9 @@ const CustomerRouter = require("./customer");
 const ProductRouter = require("./product");
 
 
-router.use("/invoice", InvoiceRouter)
-router.use("/customer", CustomerRouter)
-router.use("/productr", ProductRouter)
+// router.use("/invoice", InvoiceRouter)
+// router.use("/customer", CustomerRouter)
+// router.use("/product", ProductRouter)
 router.use("/", HomeRouter)
 
 module.exports = router;
