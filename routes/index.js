@@ -12,6 +12,6 @@ const ProductRouter = require("./product");
 // router.use("/invoice", InvoiceRouter)
 // router.use("/customer", CustomerRouter)
 // router.use("/product", ProductRouter)
-router.use("/", jwtAuth, HomeRouter)
+router.use("/", HomeRouter)
 
 module.exports = router;
