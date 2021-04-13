@@ -28,7 +28,7 @@ router.delete("/:id", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
     const { id } = req.params
-    const result = await ProductRepository.update({ id, product: req.body });
+    const result = await ProductRepository.update({ id }, { $set: req.body });
     res.json(result);
 })
 
