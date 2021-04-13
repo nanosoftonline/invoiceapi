@@ -91,7 +91,7 @@ router.delete("/:collection/:id", async (req, res) => {
 router.put("/:collection/:id", async (req, res) => {
     try {
         const { collection, id } = req.params
-        const result = await db[collection].update({ _id: id }, req.body);
+        const result = await db[collection].update({ _id: id }, { $set: req.body });
         res.json(result);
     } catch (err) {
         res.statusCode = 500;
